@@ -13,7 +13,6 @@ public class AddressService {
     @Autowired
     private AddressDao addressDao;
 
-
     public Address createAddress(Address address) {
         return addressDao.save(address);
     }
