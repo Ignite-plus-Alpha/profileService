@@ -42,8 +42,8 @@ public class ProfileControllerTest {
         profile.setLastName("case");
         profile.setMobile("1234567897");
         profile.setPassword("password");
-        profile.setDefaultAddress("");
-        profile.setDefaultCard("");
+        profile.setDefaultAddress("Bangalore");
+        profile.setDefaultCard("4444444444444444");
         List<Profile> allUsers=singletonList(profile);
         given(profileController.getAllUsers()).willReturn(allUsers);
         mockMvc.perform(get("/api/user")
@@ -60,9 +60,10 @@ public class ProfileControllerTest {
         profile.setLastName("case");
         profile.setMobile("1234567897");
         profile.setPassword("password");
-        profile.setDefaultAddress("");
-        profile.setDefaultCard("");
-        String mail=new String();
+        profile.setDefaultAddress("Bangalore");
+        profile.setDefaultCard("4444444444444");
+
+        String mail = new String();
         given(profileController.registerUser(profile.getEmail())).willReturn(mail);
         mockMvc.perform(get("/api/register/testcase@gmail.com")
                 .contentType(APPLICATION_JSON))

@@ -45,5 +45,4 @@ public class Address {
     @Enumerated(EnumType.STRING)
     private AddressType addressType;
 
-
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface WalletDao extends CassandraRepository<Wallet,String> {
-    //fetch list of wallets associated with an email
+
     List<Wallet> findByUserid(String userId);
 
 }

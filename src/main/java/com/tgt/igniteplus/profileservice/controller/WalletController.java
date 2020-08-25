@@ -60,8 +60,6 @@ public class WalletController {
         return walletService.updateWalletByUserIdWalletId(userId,walletId, wallet);
     }
 
-
-    //delete a particular address of a user taking their userId and the particular addressId
     @ApiOperation(value = "delete particular wallet of a user by their userId and wallet id")
     @DeleteMapping("/wallet/{userId}/{walletId}")
     public void deleteWalletByUserIdWalletId(@PathVariable("userId") String userId,@PathVariable("walletId") String walletId) throws WalletNotFoundException{
